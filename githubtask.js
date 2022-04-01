@@ -25,13 +25,14 @@ const github = (username) => new Promise((resolve, reject) => {
 });
 
 (async () => {
-  console.clear()
-     var username =  readline.question('\n username : ')
+     var username =  readline.question('\n input username : ')
+     console.clear()
      const ggithub = await github(username)
+     const uname = ggithub["login"]
      const nama = ggithub["name"]
      const followers = ggithub["followers"]
      const following = ggithub["following"]
-     console.log(`\n USERNAME = ${username}`)
+     console.log(`\n USERNAME = ${uname}`)
      console.log(` NAMA = ${nama}`)
      console.log(` FOLLOWERS = ${followers}`)
      console.log(` FOLLOWING = ${following}`)
