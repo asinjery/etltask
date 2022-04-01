@@ -32,8 +32,11 @@ const github = (username) => new Promise((resolve, reject) => {
      const nama = ggithub["name"]
      const followers = ggithub["followers"]
      const following = ggithub["following"]
+     if(nama==null){
+        console.log("\n USER TIDAK DITEMUKAN")}
+     else{
      console.log(`\n USERNAME = ${uname}`)
      console.log(` NAMA = ${nama}`)
      console.log(` FOLLOWERS = ${followers}`)
-     console.log(` FOLLOWING = ${following}`)
+     console.log(` FOLLOWING = ${following}`)}
 })();
